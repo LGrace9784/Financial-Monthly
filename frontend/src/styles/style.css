@@ -1,0 +1,168 @@
+.expense-section {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  margin-bottom: 1rem;
+  padding: 1rem !important;
+}
+
+.expense-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.expense-row {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.8rem 0.9rem;
+  margin: 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+.expense-field {
+  border-radius: 8px;
+  border: 1px solid #dfe3e8;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  min-height: 38px;
+}
+
+.expense-field:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.needed-expense-box {
+  margin-right: 0.45rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+
+.needed-expense-checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.3rem;
+}
+
+.remove-expense-btn {
+  width: 100%;
+  max-width: 96px;
+  min-height: 34px;
+  border-radius: 8px;
+  white-space: nowrap;
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: visible;
+  padding: 0.4rem 0.7rem;
+  border-width: 1px;
+  border-color: #dc3545;
+  color: #dc3545;
+  background: #fff;
+  font-weight: 600;
+  margin-top: 1.55rem;
+}
+
+.add-expense-btn {
+  border-radius: 8px;
+  align-self: center;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+}
+
+.compact-result-card {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+.compact-result-card:hover,
+.compact-result-card:focus {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.compact-result-card:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 3px;
+}
+
+.compact-card-body {
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.compact-header-row {
+  margin-bottom: 0.2rem !important;
+  min-height: 1.5rem;
+}
+
+.compact-label {
+  font-size: 0.9rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-inline: auto;
+}
+
+.compact-value {
+  margin-bottom: 0;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.compact-description {
+  position: absolute;
+  inset: 100% 0.75rem auto;
+  z-index: 2;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  color: #495057;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  text-align: left;
+  box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.35rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.compact-result-card:hover .compact-description,
+.compact-result-card:focus .compact-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.compact-edit-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 767.98px) {
+  .expense-row {
+    padding: 0.85rem;
+  }
+
+  .remove-expense-btn {
+    max-width: none;
+    width: 100%;
+  }
+}
